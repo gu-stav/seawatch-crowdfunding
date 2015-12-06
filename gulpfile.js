@@ -8,6 +8,23 @@ var pngquant = require('imagemin-pngquant');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 
+var optimizeImages = function() {
+  var images = gulp.src([
+    './assets/images/**/*',
+  ], { base: './' })
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [
+        pngquant(),
+        imageminJpegtran(),
+      ]
+    }))
+    .pipe(gulp.dest('dist'));
+
+  return images;
+}
+
 var compileScripts = function() {
   return gulp.src([
     './node_modules/aja/src/aja.js',
@@ -30,20 +47,7 @@ var compileStyles = function(source) {
     .pipe(concat('main.css'))
     .pipe(gulp.dest('./dist/assets/styles/'));
 
-  var images = gulp.src([
-    './assets/images/**/*',
-  ], { base: './' })
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [
-        pngquant(),
-        imageminJpegtran(),
-      ]
-    }))
-    .pipe(gulp.dest('dist'));
-
-  return merge(styles, images);
+  return styles;
 };
 
 gulp.task('default', function() {
@@ -59,5 +63,9 @@ gulp.task('watch', function (cb) {
 
     watch('assets/scripts/**/*.js', function () {
         compileScripts();
+    });
+
+    watch('assets/images/**/*', function () {
+        optimizeImages();
     });
 });
