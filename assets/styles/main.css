@@ -1,0 +1,348 @@
+* {
+  box-sizing: border-box;
+}
+
+address {
+  font-style: normal;
+}
+
+/* App */
+.app {
+  color: #333;
+}
+
+
+/* Reset List */
+.reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Button */
+.button {
+  background-color: rgb(23, 175, 250);
+  color: rgb(255, 255, 255);
+  border: none;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: .05rem;
+  padding: 1.6rem 3.2rem;
+  text-transform: uppercase;
+  transition: background-color 200ms;
+}
+
+.button:hover,
+.button:focus {
+  background-color: rgb(17, 139, 200);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.button--attention {
+  background-color: rgb(255, 128, 48);
+}
+
+.button--attention:hover,
+.button--attention:focus {
+  background-color: rgb(255, 99, 0);
+}
+
+.button--centered {
+  display: table;
+  margin: auto;
+}
+
+.button--condensed {
+  padding: .6rem 1.2rem;
+}
+
+@media screen and (max-width: 990px) {
+  .button {
+    padding: 1.2rem 2.2rem;
+  }
+}
+
+/* Responsive Video */
+.responsive-video {
+  position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.responsive-video > iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Figure */
+.figure img {
+  height: autp;
+  max-width: 100%;
+  transition: opacity 200ms;
+}
+
+.figure img:hover {
+  opacity: .8;
+}
+
+.figure__caption {
+  color: rgb(120, 120, 120);
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin-top: 1rem;
+}
+
+/* Header */
+.header {
+  background-color: rgb(239, 239, 239);
+  background-position: center center;
+  background-size: cover;
+  height: 680px;
+  position: relative;
+}
+
+.header__overlay {
+  background-color: rgba(0, 0, 0, .2);
+  height: 100%;
+  width: 100%;
+}
+
+.header__container {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__teaser {
+  color: rgb(255, 255, 255);
+  font-family: Roboto, sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 2rem auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  display: block;
+  margin: 0 auto;
+  width: 18rem;
+}
+
+.header__video {
+  width: 70rem;
+  margin: 1rem auto 1rem auto;
+}
+
+@media screen and (max-width: 990px) {
+  .header {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: auto;
+  }
+}
+
+/* Donation Bar */
+.donation-bar {
+  background-color: rgb(39, 39, 39);
+  color: rgb(255, 255, 255);
+  font-family: Roboto, sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.donation-bar .button {
+  margin-top: .5rem;
+}
+
+/* Main */
+.main {
+  color: #333;
+  font-family: Roboto, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.45;
+  padding: 2rem 0;
+}
+
+.main__teaser {
+  font-weight: 900;
+}
+
+.main h2 {
+  border-bottom: 1px solid rgb(23, 175, 250);
+  color: rgb(23, 175, 250);
+  font-family: Roboto, sans-serif;
+  font-size: 2.4rem;
+  margin: 1.5rem 0 1rem 0;
+  padding: 0 0 .3rem 0;
+  text-transform: uppercase;
+}
+
+.main h3 {
+  color: rgb(23, 175, 250);
+  font-family: Roboto, sans-serif;
+  font-size: 2rem;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.main strong {
+  font-weight: 900;
+}
+
+.main .figure--right {
+  float: right;
+  margin: 1.5rem -10% 1.5rem 1.5rem;
+  max-width: 380px;
+}
+
+@media screen and (max-width: 990px) {
+  .main .figure {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
+/* Donate Iframe */
+.betterplace__iframe {
+  border: 0;
+  height: 1220px;
+  width: 100%;
+}
+
+/* Quote */
+.quote {
+  margin: 1.5rem 0 0 0;
+}
+
+.quote__title {
+  color: rgb(23, 175, 250);
+  font-family: Roboto, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.quote__position {
+  color: rgb(120, 120, 120);
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.quote__text {
+  color: rgb(120, 120, 120);
+  font-family: Georgia, serif;
+  font-size: 1.9rem;
+  font-style: italic;
+  line-height: 1.25;
+  margin: 0;
+  padding: 1rem .5rem;
+  text-align: center;
+}
+
+.quote__image {
+  border-bottom: 3px solid rgb(23, 175, 250);
+  height: auto;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+
+/* Progressbar */
+.progressbar {
+  background-color: rgb(238, 238, 238);
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: .3rem;
+  height: 4rem;
+  margin: 2.5rem 0 3.5rem 0;
+  position: relative;
+}
+
+.progressbar__progress {
+  background-color: rgb(23, 175, 250);
+  border-radius: .3rem 0 0 .3rem;
+  color: rgb(255, 255, 255);
+  font-family: Roboto, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  height: 100%;
+  left: 0;
+  line-height: 4rem;
+  padding: 0 1.5rem;
+  position: absolute;
+  top: 0;
+  transition: width 400ms ease-in-out;
+  white-space: nowrap;
+}
+
+/* Relevance */
+.relevance {
+  padding: .4rem 0 .4rem 9.7rem;
+  position: relative;
+}
+
+.relevance__amount {
+  color: #333;
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  text-align: right;
+  top: .3rem;
+  width: 8.5rem;
+}
+
+/* Attention Box */
+.attention-box {
+  background-color: rgb(238, 238, 238);
+  margin: 4.5rem 0 1.5rem 0;
+  padding: 2rem 3rem;
+}
+
+.attention-box .button {
+  margin-top: 3rem;
+}
+
+/* Footer */
+.footer {
+  background-color: rgb(23, 175, 250);
+  color: rgb(255, 255, 255);
+  margin-top: 2.5rem;
+  padding: 3.5rem 0;
+}
+
+.footer__logo {
+  width: 14rem;
+}
+
+.footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+.footer h5 {
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
