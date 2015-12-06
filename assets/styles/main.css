@@ -65,6 +65,17 @@ address {
   }
 }
 
+/* Separator */
+.separator {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgb(23, 175, 250);
+  margin: 2rem 0;
+  padding: 0;
+  width: 100%;
+}
+
 /* Responsive Video */
 .responsive-video {
   position: relative;
