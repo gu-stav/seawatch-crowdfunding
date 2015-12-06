@@ -14,7 +14,6 @@ var optimizeImages = function() {
   ], { base: './' })
     .pipe(imagemin({
       progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
       use: [
         pngquant(),
         imageminJpegtran(),
