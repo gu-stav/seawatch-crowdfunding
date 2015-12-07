@@ -6,6 +6,10 @@ address {
   font-style: normal;
 }
 
+dl {
+  margin: 0;
+}
+
 /* App */
 .app {
   color: #333;
@@ -29,7 +33,9 @@ address {
   font-size: 1.8rem;
   font-weight: 900;
   letter-spacing: .05rem;
+  line-height: 1.2;
   padding: 1.6rem 3.2rem;
+  text-align: center;
   text-transform: uppercase;
   transition: background-color 200ms;
 }
@@ -66,6 +72,7 @@ address {
   font-weight: normal;
   margin: 0;
   padding: 0;
+  text-align: left;
   text-transform: none;
 }
 
@@ -79,6 +86,10 @@ address {
 @media screen and (max-width: 990px) {
   .button {
     padding: 1.2rem 2.2rem;
+  }
+
+  .button--link {
+    padding: 0;
   }
 }
 
@@ -145,8 +156,40 @@ address {
 }
 
 .meta__logo {
+  float: right;
+  max-width: 100%;
   vertical-align: middle;
   width: 9rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .meta__teaser {
+    font-size: 3.4rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .meta__teaser {
+    font-size: 2.6rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .meta__logo {
+    display: block;
+    float: none;
+    margin: 0 auto 2rem auto;
+  }
+
+  .meta__teaser {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+  }
+
+  .meta__teaser br {
+    display: none;
+  }
 }
 
 
@@ -192,11 +235,27 @@ address {
   .header {
     height: 440px;
   }
+
+  .header__video {
+    width: 54rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .header {
     height: auto;
+  }
+
+  .header__container {
+    left: auto;
+    padding: 3rem 0;
+    position: relative;
+    top: auto;
+    transform: none;
+  }
+
+  .header__video {
+    width: 90%;
   }
 }
 
@@ -267,6 +326,13 @@ address {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 /* Donate Iframe */
 .bankaccount {
   background-color: rgb(238, 238, 238);
@@ -305,10 +371,28 @@ address {
 
 .bankaccount__address {
   font-size: 1.4rem;
+  margin-bottom: 0;
 }
 
 .bankaccount__description {
   clear: right;
+}
+
+@media screen and (max-width: 450px) {
+  .bankaccount__term {
+    float: none;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .bankaccount__description {
+    line-height: 1;
+    margin-left: 0;
+  }
+
+  .bankaccount__description + .bankaccount__term {
+    margin-top: .5rem;
+  }
 }
 
 .spendenbank {
@@ -336,6 +420,18 @@ address {
   border: 0;
   height: 1220px;
   width: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .betterplace__iframe {
+    height: 1350px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .betterplace__iframe {
+    height: 1450px;
+  }
 }
 
 /* Quote */
@@ -421,6 +517,25 @@ address {
   width: 10.5rem;
 }
 
+@media screen and (max-width: 450px) {
+  .relevance {
+    line-height: 1.4;
+    padding-left: 0;
+  }
+
+  .relevance + .relevance {
+    border-top: 1px solid rgb(213, 213, 213);
+  }
+
+  .relevance__amount {
+    color: rgb(23, 175, 250);
+    display: block;
+    font-size: 1.9rem;
+    position: relative;
+    text-align: left;
+  }
+}
+
 /* Attention Box */
 .attention-box {
   background-color: rgb(238, 238, 238);
@@ -428,8 +543,25 @@ address {
   padding: 2rem 3rem;
 }
 
+.attention-box > p {
+  margin: 0;
+}
+
 .attention-box .button {
   margin-top: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .attention-box {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .attention-box .button {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+  }
 }
 
 /* Footer */
@@ -437,7 +569,7 @@ address {
   border-top: 3px solid rgb(23, 175, 250);
   line-height: 1.5;
   margin-top: 2.5rem;
-  padding: 3.5rem 0;
+  padding: 1.5rem 0 3.5rem 0;
 }
 
 .footer__logo {
@@ -449,8 +581,22 @@ address {
   text-decoration: underline;
 }
 
-.footer h5 {
+.footer__headline {
   font-size: 1.4rem;
-  margin: 0 0 1rem 0;
+  margin: 1.5rem 0 1rem 0;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 0;
+  }
+
+  .footer__headline {
+    font-size: 1.8rem;
+  }
+
+  .footer__logo {
+    display: none;
+  }
 }
