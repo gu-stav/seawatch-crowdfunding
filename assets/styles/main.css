@@ -155,7 +155,7 @@ address {
   background-color: rgb(239, 239, 239);
   background-position: bottom center;
   background-size: cover;
-  height: 640px;
+  height: 560px;
   position: relative;
 }
 
@@ -184,8 +184,8 @@ address {
 }
 
 .header__video {
-  width: 80rem;
-  margin: 0 auto 3rem auto;
+  width: 72rem;
+  margin: 0 auto 2rem auto;
 }
 
 @media screen and (max-width: 990px) {
