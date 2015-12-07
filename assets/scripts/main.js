@@ -18,6 +18,10 @@
   };
 
   var fillProgressbar = function() {
+    /*
+       'aja' is a npm dependency, which will be in the minfied file before this
+       function, so we are able to skip imports
+    */
     aja()
       .url(BETTERPLACE_API)
       .on('success', function(data){
