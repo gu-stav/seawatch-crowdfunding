@@ -1,26 +1,38 @@
-var BETTERPLACE_API = 'https://api.betterplace.org/de/api_v4/projects/36808.json';
+(function(window, document) {
+  const BETTERPLACE_API = 'https://api.betterplace.org/de/api_v4/projects/36808.json';
 
-aja()
-  .url(BETTERPLACE_API)
-  .on('success', function(data){
-    var progress = data.progress_percentage;
-    var progressbar = document.querySelectorAll('.progressbar__progress');
+  var toggleDonateForms = function() {
+    /* Spendenbank Toggle */
+    var trigger = document.querySelectorAll('.spendenbank__toggle')[0];
 
-    progressbar[0].innerHTML = progress + '% fianziert';
-    progressbar[0].style.width = progress + '%';
-  })
-  .go();
+    trigger.addEventListener('click', function(e) {
+        e.preventDefault();
 
-/* Spendenbank Toggle */
-var trigger = document.querySelectorAll('.spendenbank__toggle')[0];
+        var target = document.querySelectorAll('.spendenbank')[0];
+        var bankTarget = document.querySelectorAll('.bankaccount')[0];
 
-trigger.addEventListener('click', function(e) {
-    e.preventDefault();
+        trigger.classList.add('hidden');
+        target.classList.add('spendenbank--is-visible');
+        bankTarget.classList.add('bankaccount--is-visible');
+    });
+  };
 
-    var target = document.querySelectorAll('.spendenbank')[0];
-    var bankTarget = document.querySelectorAll('.bankaccount')[0];
+  var fillProgressbar = function() {
+    aja()
+      .url(BETTERPLACE_API)
+      .on('success', function(data){
+        var progress = data.progress_percentage;
+        var progressbar = document.querySelectorAll('.progressbar__progress');
 
-    trigger.classList.add('hidden');
-    target.classList.add('spendenbank--is-visible');
-    bankTarget.classList.add('bankaccount--is-visible');
-});
+        progressbar[0].innerHTML = progress + '% fianziert';
+        progressbar[0].style.width = progress + '%';
+      })
+      .go();
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    toggleDonateForms();
+    fillProgressbar();
+  });
+
+}(window, document));
