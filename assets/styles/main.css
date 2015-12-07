@@ -59,6 +59,23 @@ address {
   padding: .6rem 1.2rem;
 }
 
+.button--link {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+.button--link:hover,
+.button--link:focus {
+  background: transparent;
+  color: #333;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 990px) {
   .button {
     padding: 1.2rem 2.2rem;
@@ -119,16 +136,17 @@ address {
 .meta__teaser {
   color: rgb(23, 175, 250);
   font-family: Roboto, sans-serif;
-  font-size: 4.2rem;
+  font-size: 4rem;
   font-weight: 900;
   line-height: 1;
   margin: 0;
+  padding-top: .5rem;
   text-align: center;
 }
 
 .meta__logo {
   vertical-align: middle;
-  width: 10rem;
+  width: 9rem;
 }
 
 
@@ -204,7 +222,7 @@ address {
   font-family: Roboto, sans-serif;
   font-size: 1.9rem;
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 1.55;
   padding: 2rem 0;
 }
 
@@ -236,7 +254,7 @@ address {
 
 .main .figure--right {
   float: right;
-  margin: 1.5rem -10% 1.5rem 1.5rem;
+  margin: 1.5rem -5% 1.5rem 1.5rem;
   max-width: 380px;
 }
 
@@ -261,6 +279,21 @@ address {
   display: block;
 }
 
+.bankaccount--footer {
+  background: transparent;
+  padding: 0;
+}
+
+.bankaccount--footer .bankaccount__term {
+  text-align: left;
+  width: 10rem;
+}
+
+.bankaccount--footer .bankaccount__title {
+  display: block;
+  margin-top: 3.5rem;
+}
+
 .bankaccount__term {
   float: left;
   font-weight: bold;
@@ -279,6 +312,13 @@ address {
 
 .spendenbank {
   display: none;
+}
+
+.spendenbank__toggle {
+  color: rgb(23, 175, 250);
+  display: block;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 .spendenbank__iframe {
