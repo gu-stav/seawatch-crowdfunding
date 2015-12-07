@@ -202,12 +202,6 @@ dl {
   position: relative;
 }
 
-.header__overlay {
-  background-color: rgba(0, 0, 0, .2);
-  height: 100%;
-  width: 100%;
-}
-
 .header__teaser-container {
   background-color: rgba(255, 255, 255, .6);
 }
