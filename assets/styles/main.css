@@ -166,7 +166,7 @@ address {
 }
 
 .header__video {
-  width: 76rem;
+  width: 80rem;
   margin: 0 auto 3rem auto;
 }
 
@@ -212,6 +212,7 @@ address {
   font-weight: 900;
 }
 
+.main .h2,
 .main h2 {
   border-bottom: 1px solid rgb(23, 175, 250);
   color: rgb(23, 175, 250);
@@ -249,6 +250,47 @@ address {
 }
 
 /* Donate Iframe */
+.bankaccount {
+  background-color: rgb(238, 238, 238);
+  display: none;
+  margin: 0 0 3rem 0;
+  padding: 1rem;
+}
+
+.bankaccount--is-visible {
+  display: block;
+}
+
+.bankaccount__term {
+  float: left;
+  font-weight: bold;
+  margin-right: 1.5rem;
+  text-align: right;
+  width: 13rem;
+}
+
+.bankaccount__address {
+  font-size: 1.4rem;
+}
+
+.bankaccount__description {
+  clear: right;
+}
+
+.spendenbank {
+  display: none;
+}
+
+.spendenbank__iframe {
+  border: 0;
+  height: 900px;
+  width: 100%;
+}
+
+.spendenbank--is-visible {
+  display: block;
+}
+
 .betterplace__iframe {
   border: 0;
   height: 1220px;

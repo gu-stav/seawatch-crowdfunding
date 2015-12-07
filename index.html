@@ -6,6 +6,17 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1">
 
+    <meta property="fb:app_id"
+          content="1707971766105661" />
+    <meta property="og:type"
+          content="video.movie" />
+    <meta property="og:url"
+          content="https://www.youtube.com/embed/Zr3TbG3z1Dg" />
+    <meta property="og:title"
+          content="Spende für die Sea-Watch 2" />
+    <meta property="og:image"
+          content="https://s-static.ak.fbcdn.net/images/devsite/attachment_blank.png" />
+
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,900'
           rel='stylesheet'
           type='text/css'>
@@ -69,6 +80,37 @@
             </div>
 
             <h2>Jetzt spenden!</h2>
+
+            <button class="spendenbank__toggle">Per Banküberweisung spenden</button>
+
+            <div class="bankaccount">
+              <dl>
+                <dt class="bankaccount__term">Kontoinhaber</dt>
+                <dd class="bankaccount__description">Sea-Watch e.V.</dd>
+
+                <dt class="bankaccount__term">Bank</dt>
+                <dd class="bankaccount__description">Bank für Sozialwirtschaft Berlin</dd>
+
+                <dt class="bankaccount__term">IBAN</dt>
+                <dd class="bankaccount__description">DE77 1002 0500 0002 0222 88</dd>
+
+                <dt class="bankaccount__term">BIC</dt>
+                <dd class="bankaccount__description">BFSWDE33BER</dd>
+              </dl>
+
+              <p class="bankaccount__address">Bitte geben Sie im Verwendungszweck ihr Postanschrift an, damit wir Ihnen eine deutsche Spendenbescheinigung schicken können.</p>
+            </div>
+
+            <div class="spendenbank">
+              <h3 class="h2">Oder per Direktüberweisung</h3>
+
+              <iframe class="spendenbank__iframe"
+                      id="spendenbank"
+                      frameBorder="0"
+                      scrolling="no"
+                      src="https://secure.spendenbank.de/spenden/?oid=5222320"
+                      ></iframe>
+            </div>
 
             <iframe class="betterplace__iframe"
                     id="donate"

@@ -10,3 +10,17 @@ aja()
     progressbar[0].style.width = progress + '%';
   })
   .go();
+
+/* Spendenbank Toggle */
+var trigger = document.querySelectorAll('.spendenbank__toggle')[0];
+
+trigger.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    var target = document.querySelectorAll('.spendenbank')[0];
+    var bankTarget = document.querySelectorAll('.bankaccount')[0];
+
+    trigger.classList.add('hidden');
+    target.classList.add('spendenbank--is-visible');
+    bankTarget.classList.add('bankaccount--is-visible');
+});

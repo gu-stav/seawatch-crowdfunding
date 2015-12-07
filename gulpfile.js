@@ -50,9 +50,10 @@ var compileStyles = function(source) {
 };
 
 gulp.task('default', function() {
+  var images = optimizeImages();
   var styles = compileStyles();
   var scripts = compileScripts();
-  return merge(styles, scripts);
+  return merge(styles, scripts, images);
 });
 
 gulp.task('watch', function (cb) {
