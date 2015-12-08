@@ -99,7 +99,7 @@ dl {
   height: 1px;
   border: 0;
   border-top: 1px solid rgb(23, 175, 250);
-  margin: 2rem 0;
+  margin: 5rem 0;
   padding: 0;
   width: 100%;
 }
@@ -107,12 +107,12 @@ dl {
 /* Responsive Video */
 .responsive-video {
   position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
+	padding-bottom: 56.25%;
 	height: 0;
 }
 
 .responsive-video > iframe {
+  box-shadow: 0 0 4rem rgba(0, 0, 0, .6);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -156,7 +156,6 @@ dl {
 }
 
 .meta__logo {
-  float: right;
   max-width: 100%;
   vertical-align: middle;
   width: 9rem;
@@ -221,8 +220,8 @@ dl {
 }
 
 .header__video {
-  width: 78rem;
-  margin: 0 auto 1.5rem auto;
+  width: 80rem;
+  margin: 0 auto 2rem auto;
 }
 
 @media screen and (max-width: 990px) {
