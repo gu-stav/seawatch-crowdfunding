@@ -152,7 +152,6 @@ dl {
   line-height: 1;
   margin: 0;
   padding-top: .5rem;
-  text-align: center;
 }
 
 .meta__logo {
@@ -171,6 +170,7 @@ dl {
   .meta__teaser {
     font-size: 2.6rem;
     padding-top: 1.5rem;
+    text-align: center;
   }
 }
 
