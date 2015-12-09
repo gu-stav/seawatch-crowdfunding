@@ -1,3 +1,4 @@
+var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
@@ -40,6 +41,12 @@ var compileStyles = function(source) {
     './assets/styles/vendor/**/*.css',
     './assets/styles/*.css',
   ])
+    .pipe(autoprefixer({
+      browsers: [
+        'last 2 versions',
+      ],
+      cascade: false
+    }))
     .pipe(minifyCss({
       keepSpecialComments: 0,
     }))
